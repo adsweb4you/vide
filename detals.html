@@ -22,16 +22,42 @@
          <div class="container mt-5">
             <div class="row">
                 <div class="col-lg-3">
-                    <div class="vid" style="background-image: url('asset/images/journ.png');">
-                      <button class="play" data-id="-bEMrukcnbk"></button>
+                  <div class="video-item">
+                     <div class="vid" style="background-image: url('asset/images/journ.png');">
+                      <button class="play" data-txt="ვიდეოს მოკლე   აღწერა" data-id="-bEMrukcnbk"></button>
                     </div>
+                    <div class="moretext">
+                        <p  class="mt-2">ვიდეოს მოკლე   აღწერა</p>
+                    </div>
+                  </div>
+                   
                 </div>
 
                 <div class="col-lg-3">
-                    <div class="vid" style="background-image: url('asset/images/journ.png');">
-                      <button class="play" data-id="W909nIzrUlc"></button>
+                    <div class="video-item">
+                       <div class="vid" style="background-image: url('asset/images/journ.png');">
+                        <button class="play" data-txt="ვიდეოს მოკლე   აღწერა 2" data-id="W909nIzrUlc"></button>
+                      </div>
+                      <div class="moretext">
+                          <p class="mt-2">ვიდეოს მოკლე   აღწერა 2</p>
+                      </div>
                     </div>
-                </div>
+                     
+                  </div>
+
+                  <div class="col-lg-3">
+                    <div class="video-item">
+                       <div class="vid" style="background-image: url('asset/images/journ.png');">
+                        <button class="play" data-txt="ვიდეოს მოკლე   აღწერა 2" data-id="W909nIzrUlc"></button>
+                      </div>
+                      <div class="moretext">
+                          <p class="mt-2">ვიდეოს მოკლე   აღწერა 2</p>
+                      </div>
+                    </div>
+                     
+                  </div>
+
+                  <a href="det2.html">მეორე ვარიანტი</a>
 
             </div>
          </div>
@@ -49,6 +75,11 @@
             <div class="vidfooter ">
                <img src="asset/images/Cancel.svg" alt="">
             </div>
+
+            <div class="outp">
+
+            </div>
+
             </div>
            
     
@@ -67,6 +98,11 @@ button.forEach(function(el){
     let iframe = document.querySelector('.videomodal iframe');
     let videomodal = document.querySelector('.videomodal');
     let src = this.getAttribute('data-id');
+    let btntxt = this.getAttribute('data-txt');
+
+    let txt = document.querySelector('.outp');
+
+    txt.innerHTML = btntxt;
     videomodal.classList.add('show')
     iframe.src =  `https://www.youtube.com/embed/${src}`;
 })

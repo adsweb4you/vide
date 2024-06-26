@@ -134,6 +134,20 @@ body{
     top: 0;
 }
 
+.outp{
+    position: relative;
+    z-index: 999999;
+    background-color: white;
+    font-family: 'Helv';
+    padding: 15px;
+    border-radius: 0 0 7px 7px;
+    transform: translateY(-7px);
+}
+
+.moretxt{
+    font-family: 'Helv'; 
+}
+
 @media (min-width: 1400px) {
     .container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
         max-width: 1120px;
